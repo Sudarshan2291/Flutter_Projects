@@ -1,0 +1,43 @@
+name: books_on_rent
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  animated_background: ^2.0.0
+  firebase_auth: ^5.3.3
+  firebase_core: ^3.8.0
+  firebase_storage: ^12.3.6
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  image_picker: ^1.1.2
+  intl: ^0.19.0
+  material: ^1.0.0+2
+  animated_text_kit: ^4.2.2
+  flutter_slidable: ^3.1.1
+  curved_navigation_bar: ^1.0.6
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/educational/
+    - assets/images/business/
+    - assets/images/childrens/
+    - assets/images/poetry/
+    - assets/images/educational/engineeringbooks/
+    - assets/images/educational/lawbooks/
+    - assets/images/educational/mbbsbooks/
+    - assets/images/educational/mcombooks/
+    - assets/images/educational/bcombooks/
+    - assets/images/educational/bscbooks/
