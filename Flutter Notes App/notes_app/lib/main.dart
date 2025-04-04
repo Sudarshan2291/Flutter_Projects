@@ -12,6 +12,8 @@ void main() async {
 class MyApp extends StatelessWidget {
   final themeService = ThemeService();
 
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

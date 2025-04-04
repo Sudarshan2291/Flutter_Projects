@@ -1,3 +1,5 @@
+// note_controller.dart
+
 import 'package:get/get.dart';
 import '../models/note_model.dart';
 import '../storage/storage_service.dart';
@@ -6,6 +8,17 @@ import '../utils/date_formatter.dart';
 class NoteController extends GetxController {
   final storage = StorageService();
   var notes = <Note>[].obs;
+
+  var searchQuery = ''.obs;
+
+  List<Note> get filteredNotes {
+    if (searchQuery.value.isEmpty) return notes;
+    return notes.where((note) {
+      final query = searchQuery.value.toLowerCase();
+      return note.title.toLowerCase().contains(query) ||
+          note.content.toLowerCase().contains(query);
+    }).toList();
+  }
 
   @override
   void onInit() {
@@ -39,5 +52,9 @@ class NoteController extends GetxController {
 
   void saveNotes() {
     storage.writeNotes(notes);
+  }
+
+  void setSearchQuery(String query) {
+    searchQuery.value = query;
   }
 }
