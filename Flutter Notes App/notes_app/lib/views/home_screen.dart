@@ -1,4 +1,3 @@
-// home_screen.dart
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                   final note = notes[index];
                   final originalIndex = noteCtrl.notes.indexOf(
                     note,
-                  ); // For edit/delete
+                  );
                   return NoteTile(note: note, index: originalIndex);
                 },
               );
